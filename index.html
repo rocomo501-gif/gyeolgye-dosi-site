@@ -26,11 +26,38 @@ h1{font-size:38px;margin:10px 0;text-shadow:0 0 20px #a855f7}
 .tag{color:#c084fc;font-size:14px;margin-bottom:10px}
 .card p{color:#ccc;line-height:1.7;font-size:15px}
 .place img{height:230px}  
+.menu{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#0b0b15ee;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  z-index:999;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.menu a:hover{
+  color:#c084fc;
+}  
 footer{text-align:center;padding:50px 20px;color:#aaa}
 </style>
 </head>
 <body>
-
+<nav class="menu">
+  <a href="#world">세계관</a>
+  <a href="#characters">등장인물</a>
+  <a href="#places">주요 장소</a>
+</nav>
+  
 <section class="hero">
   <img src="logo.png" class="logo" alt="결계도시 로고">
   <h1>결계도시 : 백야</h1>
@@ -52,7 +79,7 @@ footer{text-align:center;padding:50px 20px;color:#aaa}
     그러나 어느 밤, 결계에 균열이 생기기 시작하고 이야기는 홍대 뒷골목의 바
     <b>백야</b>에서 시작된다.
   </div>
-</section>
+<section id="world">
 
 <section id="characters">
   <h2 class="title">등장인물</h2>
