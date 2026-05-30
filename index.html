@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>결계도시</title>
+
+<style>
+body{
+margin:0;
+background:#090909;
+color:white;
+font-family:'Pretendard',sans-serif;
+}
+
+.hero{
+height:100vh;
+background:url('banner.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:80px;
+margin:0;
+color:#fff;
+text-shadow:0 0 30px #8b5cf6;
+}
+
+.hero p{
+font-size:22px;
+color:#ddd;
+}
+
+.characters{
+padding:80px 30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.card h2{
+padding:15px;
+margin:0;
+}
+
+.card p{
+padding:0 15px 20px;
+color:#bbb;
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+<h1>결계도시</h1>
+<p>인간과 요괴가 공존하는 현대 서울 판타지</p>
+</section>
+
+<section class="characters">
+
+<div class="card">
+<img src="ryu.jpg">
+<h2>류</h2>
+<p>구미호</p>
+</div>
+
+<div class="card">
+<img src="gangcheong.jpg">
+<h2>유강청</h2>
+<p>청룡</p>
+</div>
+
+<div class="card">
+<img src="baekin.jpg">
+<h2>장백인</h2>
+<p>백호</p>
+</div>
+
+<div class="card">
+<img src="myojin.jpg">
+<h2>신묘진</h2>
+<p>고양이 요괴</p>
+</div>
+
+<div class="card">
+<img src="hangyeol.jpg">
+<h2>김한결</h2>
+<p>퇴마사</p>
+</div>
+
+<div class="card">
+<img src="jihyeok.jpg">
+<h2>백지혁</h2>
+<p>텐구</p>
+</div>
+
+<div class="card">
+<img src="yuseol.jpg">
+<h2>김유설</h2>
+<p>유키온나</p>
+</div>
+
+</section>
+
+</body>
+</html>
