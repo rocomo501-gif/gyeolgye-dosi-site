@@ -58,19 +58,19 @@ footer{text-align:center;padding:50px 20px;color:#aaa}
   <h2 class="title">등장인물</h2>
   <div class="grid">
 
-    <div class="card"><img src="ryu.png"><div class="info"><h3>류</h3><div class="tag">구미호 · 백야의 주인</div><p>930년을 살아온 구미호이자 바 백야의 오너. 여유로운 미소 뒤에 수많은 비밀을 숨기고 있다.</p></div></div>
+<div class="card" onclick="openModal('ryu')"><img src="ryu.png">    <div class="info"><h3>류</h3><div class="tag">구미호 · 백야의 주인</div><p>930년을 살아온 구미호이자 바 백야의 오너. 여유로운 미소 뒤에 수많은 비밀을 숨기고 있다.</p></div></div>
 
-    <div class="card"><img src="gangcheong.png"><div class="info"><h3>유강청</h3><div class="tag">청룡 · 결계 관리자</div><p>서울의 결계를 유지하는 수호자. 냉철하고 원칙적이지만 책임감만큼은 누구보다 강하다.</p></div></div>
+<div class="card" onclick="openModal('gangcheong')"><img src="gangcheong.png">    <div class="info"><h3>유강청</h3><div class="tag">청룡 · 결계 관리자</div><p>서울의 결계를 유지하는 수호자. 냉철하고 원칙적이지만 책임감만큼은 누구보다 강하다.</p></div></div>
 
-    <div class="card"><img src="baekin.png"><div class="info"><h3>장백인</h3><div class="tag">백호 · 도장 사범</div><p>격투 도장의 사범이자 뒷골목 해결사. 거칠지만 인정한 사람에게는 든든한 편이 된다.</p></div></div>
+<div class="card" onclick="openModal('baekin')"><img src="baekin.png">    <div class="info"><h3>장백인</h3><div class="tag">백호 · 도장 사범</div><p>격투 도장의 사범이자 뒷골목 해결사. 거칠지만 인정한 사람에게는 든든한 편이 된다.</p></div></div>
 
-    <div class="card"><img src="myojin.png"><div class="info"><h3>신묘진</h3><div class="tag">고양이 요괴 · 정보상</div><p>요계의 정보를 거래하는 브로커. 귀찮은 척하지만 누구보다 많은 비밀을 알고 있다.</p></div></div>
+<div class="card" onclick="openModal('myojin')"><img src="myojin.png"><div class="info"><h3>신묘진</h3><div class="tag">고양이 요괴 · 정보상</div><p>요계의 정보를 거래하는 브로커. 귀찮은 척하지만 누구보다 많은 비밀을 알고 있다.</p></div></div>
 
-    <div class="card"><img src="hangyeol.png"><div class="info"><h3>김한결</h3><div class="tag">퇴마사 · 감시관</div><p>국가 비밀기관 소속 퇴마사. 요괴를 경계하지만 한 번 신뢰하면 끝까지 지킨다.</p></div></div>
+<div class="card" onclick="openModal('hangyeol')"><img src="hangyeol.png"><div class="info"><h3>김한결</h3><div class="tag">퇴마사 · 감시관</div><p>국가 비밀기관 소속 퇴마사. 요괴를 경계하지만 한 번 신뢰하면 끝까지 지킨다.</p></div></div>
 
-    <div class="card"><img src="jihyeok.png"><div class="info"><h3>백지혁</h3><div class="tag">텐구 · 요계 전령</div><p>바람을 다루는 텐구. 도도하고 자존심 강하지만 요계와 인간계를 잇는 전령이다.</p></div></div>
-
-    <div class="card"><img src="yuseol.png"><div class="info"><h3>김유설</h3><div class="tag">유키온나 · 바리스타</div><p>요계 근처 카페의 바리스타. 차가운 체온과 달리 섬세하고 따뜻한 감정을 품고 있다.</p></div></div>
+<div class="card" onclick="openModal('jihyeok')"><img src="jihyeok.png"><div class="info"><h3>백지혁</h3><div class="tag">텐구 · 요계 전령</div><p>바람을 다루는 텐구. 도도하고 자존심 강하지만 요계와 인간계를 잇는 전령이다.</p></div></div>
+    
+<div class="card" onclick="openModal('yuseol')"><img src="yuseol.png"><div class="info"><h3>김유설</h3><div class="tag">유키온나 · 바리스타</div><p>요계 근처 카페의 바리스타. 차가운 체온과 달리 섬세하고 따뜻한 감정을 품고 있다.</p></div></div>
 
   </div>
 </section>
@@ -106,6 +106,36 @@ footer{text-align:center;padding:50px 20px;color:#aaa}
   결계도시 : 백야<br>
   인간과 요괴가 만나는 밤의 도시
 </footer>
+<div id="modal" style="display:none;position:fixed;inset:0;background:#000c;z-index:999;padding:30px;overflow:auto;">
+  <div style="background:#11111f;border:1px solid #a855f7;border-radius:24px;padding:24px;max-width:520px;margin:40px auto;">
+    <button onclick="closeModal()" style="float:right;background:#a855f7;color:white;border:0;border-radius:50%;width:34px;height:34px;">×</button>
+    <h2 id="modalName"></h2>
+    <p id="modalType" style="color:#c084fc;"></p>
+    <p id="modalText" style="line-height:1.8;color:#ddd;"></p>
+  </div>
+</div>
 
+<script>
+const profiles = {
+  ryu: ["류", "구미호 · 백야의 주인", "930년을 살아온 구미호이자 바 백야의 오너. 환혹술과 기 흡수에 능하며, 홍대 뒷골목과 요계의 수많은 비밀을 알고 있다."],
+  gangcheong: ["유강청", "청룡 · 결계 관리자", "수천 년 동안 서울의 결계를 지켜온 청룡. 번개와 폭풍을 다루며, 무너지는 결계를 막기 위해 움직인다."],
+  baekin: ["장백인", "백호 · 도장 사범", "격투 도장의 사범이자 뒷골목 해결사. 괴력과 초재생 능력을 지녔으며, 인정한 사람에게는 누구보다 든든하다."],
+  myojin: ["신묘진", "고양이 요괴 · 정보상", "요계의 정보를 거래하는 브로커. 잠입과 은신에 능하고, 누구도 모르는 비밀을 수집한다."],
+  hangyeol: ["김한결", "퇴마사 · 감시관", "국가 비밀기관 소속 퇴마사. 부적술과 결계 파훼에 능하며, 요괴와 인간의 경계를 감시한다."],
+  jihyeok: ["백지혁", "텐구 · 요계 전령", "바람과 검기를 다루는 텐구. 요계와 인간계를 오가는 전령이자, 텐구 신사의 주인이다."],
+  yuseol: ["김유설", "유키온나 · 바리스타", "요계 근처 카페의 바리스타. 빙결술과 환상 유도에 능하며, 조용하지만 섬세한 감정을 품고 있다."]
+};
+
+function openModal(id){
+  document.getElementById("modalName").innerText = profiles[id][0];
+  document.getElementById("modalType").innerText = profiles[id][1];
+  document.getElementById("modalText").innerText = profiles[id][2];
+  document.getElementById("modal").style.display = "block";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 </body>
 </html>
